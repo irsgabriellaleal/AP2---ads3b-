@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Atualizar Sorvete</title>
+
+  </head>
+
+  <body>
+
+    <h1>Atualizar Sorvete</h1>
+
+    <form action="{{url_for('sorvetes.update_sorvete', id_sorvete=sorvete.id)}}" method="POST">
+    
+      <input type="hidden" name="_method" value="PUT">
+
+      <label for="sabor">Sabor:</label><br>
+      <input type="text" id="sabor" name="sabor" required><br>
+
+      <label for="categoria">Categoria:</label><br>
+      <input type="text" id="categoria" name="categoria" required><br>
+
+      <label for="preco">Preço:</label><br>
+      <input type="number" id="preco" name="preco" required><br>
+
+      <label for="estoque">Quantidade em Estoque:</label><br>
+      <input type="number" id="estoque" name="estoque" required><br><br>
+
+      <button type="submit">Atualizar</button>
+      
+    </form>
+
+  </body>
+
+</html>

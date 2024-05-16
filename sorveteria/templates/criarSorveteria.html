@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adicionar Sorvete</title>
+
+  </head>
+
+  <body>
+
+    <h1>Adicionar Sorvete</h1>
+
+    <form action="{{url_for('sorvetes.create_sorvete')}}" method="post">
+
+      <label for="sabor">Sabor:</label><br>
+      <input type="text" id="sabor" name="sabor" required><br>
+
+      <label for="categoria">Categoria:</label><br>
+      <input type="text" id="categoria" name="categoria" required><br>
+
+      <label for="preco">Preço:</label><br>
+      <input type="number" id="preco" name="preco" required><br>
+
+      <label for="estoque">Quantidade em Estoque:</label><br>
+      <input type="number" id="estoque" name="estoque" required><br><br>
+
+      <input type="submit" value="Adicionar Sorvete">
+
+    </form>
+    
+  </body>
+
+</html>
